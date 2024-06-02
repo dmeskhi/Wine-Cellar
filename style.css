@@ -12,10 +12,118 @@ html {
     font-size: 62.5%;
 }
 
+.navbar {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo {
+    height: 10rem;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    color: #fff;
+    width: 15rem;
+    margin: 0 3rem;
+    text-transform: uppercase;
+    border: 0.1rem solid #fff;
+    text-align: center;
+    padding: 0.2rem 0;
+    letter-spacing: 0.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    position: absolute;
+    content: "";
+    width: 150%;
+    height: 5rem;
+    background-color: #a742af;
+    left: -20%;
+    transform: rotate(-40deg) translateX(-4rem);
+    transform-origin: left bottom;
+    opacity: 0.8;
+    transition: left 0.3s;
+}
+
+.nav-link:hover::before {
+    left: 110%;
+}
+
+.page-btn {
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.page-btn:hover {
+    opacity: 1;
+}
+
+.progress-wrapper {
+    position: fixed;
+    z-index: 100;
+    bottom: 2rem;
+    left: 3rem;
+}
+
+.progress h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+.progress {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.circle-wrapper {
+    display: flex;
+}
+
+.circle {
+    width: 1rem;
+    height: 1rem;
+    border: 0.1rem solid #fff;
+    border-radius: 50%;
+    margin: 0 0.3rem;
+}
+
+.left-btn {
+    cursor: pointer;
+    left: 4rem;
+    transform: rotate(-90deg);
+}
+
+.right-btn {
+    cursor: pointer;
+    right: 4rem;
+    transform: rotate(90deg);
+}
+
 .wrapper {
     width: 100vw;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 
 section {
@@ -23,6 +131,8 @@ section {
     height: 100%;
     position: absolute;
     left: 0;
+    overflow: hidden;
+    transition: left 1.5s;
 }
 
 .section-1 {
@@ -35,8 +145,8 @@ section {
 }
 
 .section-1-wrapper {
-    background: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.6)), url(img/mainbg.jpg) center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.8)), url(img/mainbg.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -53,7 +163,138 @@ section {
     color: #fff;
     text-transform: capitalize;
     letter-spacing: 0.1rem;
-    border-bottom: 0.2rem solid #a55172;
+    border-bottom: 0.2rem solid #a742af;
     text-align: right;
     user-select: none;
+}
+
+.section-content-heading {
+    width: 100%;
+    padding-bottom: 3rem;
+    font-size: 6rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0.5rem 1.5rem #000;
+    letter-spacing: 0.1rem;
+    border-bottom: 0.2rem solid #a742af;
+    text-align: left;
+    user-select: none;
+}
+
+.section-2 {
+    z-index: 40;
+}
+
+.section-2-wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.9)), url(img/cellar.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-content {
+    width: 60%;
+    /* border: 1px solid #a55172; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-content-wrapper {
+    font-size: 2.5rem;
+    color: #fff;
+    padding-top: 5rem;
+}
+
+.image-wrapper-left img {
+    float: left;
+    border: 0.2rem solid #a742af;
+    border-radius: 1rem;
+    margin-right: 1.5rem;
+}
+
+.image-wrapper-right img {
+    float: right;
+    border: 0.2rem solid #a742af;
+    border-radius: 1rem;
+    margin-left: 1.5rem;
+}
+
+.text-wrapper {
+    padding-left: 0.3rem;
+    line-height: 3rem;
+    letter-spacing: 0.1rem;
+    text-align: justify;
+}
+
+.section-3 {
+    z-index: 30;
+}
+
+.section-3-wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.9)), url(img/vineyard.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-4 {
+    z-index: 20;
+}
+
+.section-4-wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.8)), url(img/wine.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-5 {
+    z-index: 10;
+}
+
+.section-5-wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.8)), url(img/grape.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-list li {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: #ddd;
+    margin: 1rem 0;
+}
+
+.footer-list li:first-child {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer-img {
+    width: 60rem;
+    margin: 0 20rem;
+    opacity: 0.9;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #eee;
+    letter-spacing: 0.2rem;
 }
