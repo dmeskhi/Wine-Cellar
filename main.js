@@ -71,16 +71,14 @@ window.addEventListener("wheel", (e) => {
       `.section-${deltaY ? counter1 : counter2}`
     ).style.left = `${deltaY ? "-100vw" : "0"}`;
 
-    document.querySelector(`.section-${deltaY ? 
-        counter1 : counter2}-wrapper`).style.
-        transform = `scale(${deltaY ? "1.5" : "1"})`;
-    
-    document.querySelector(`.section-${deltaY ? 
-        counter1 + 1 : counter2 + 1}-wrapper`).style.
-        transform = `scale(${deltaY ? "1" : "1.5"})`;
-  }
+    document.querySelector(
+      `.section-${deltaY ? counter1 : counter2}-wrapper`
+    ).style.transform = `scale(${deltaY ? "1.5" : "1"})`;
 
-  
+    document.querySelector(
+      `.section-${deltaY ? counter1 + 1 : counter2 + 1}-wrapper`
+    ).style.transform = `scale(${deltaY ? "1" : "1.5"})`;
+  }
 });
 
 document.querySelector(".left-btn").addEventListener("click", () => {
@@ -89,12 +87,12 @@ document.querySelector(".left-btn").addEventListener("click", () => {
   pageController() &&
     (document.querySelector(`.section-${counter2}`).style.left = "0");
 
-    if (bool) {
-        document.querySelector(`.section-${counter2}-wrapper`).style.
-        transform = "scale(1)";
-        document.querySelector(`.section-${counter2 + 1}-wrapper`).style.
-        transform = "scale(1.5)";
-    }
+  if (bool) {
+    document.querySelector(`.section-${counter2}-wrapper`).style.transform =
+      "scale(1)";
+    document.querySelector(`.section-${counter2 + 1}-wrapper`).style.transform =
+      "scale(1.5)";
+  }
 });
 
 document.querySelector(".right-btn").addEventListener("click", () => {
@@ -103,12 +101,12 @@ document.querySelector(".right-btn").addEventListener("click", () => {
   pageController() &&
     (document.querySelector(`.section-${counter1}`).style.left = "-100vw");
 
-    if (bool) {
-        document.querySelector(`.section-${counter2}-wrapper`).style.
-        transform = "scale(1)";
-        document.querySelector(`.section-${counter1}-wrapper`).style.
-        transform = "scale(1.5)";
-    }
+  if (bool) {
+    document.querySelector(`.section-${counter2}-wrapper`).style.transform =
+      "scale(1)";
+    document.querySelector(`.section-${counter1}-wrapper`).style.transform =
+      "scale(1.5)";
+  }
 });
 
 menu.addEventListener("click", () => {
