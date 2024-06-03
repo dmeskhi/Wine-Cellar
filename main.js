@@ -5,6 +5,7 @@ let bool = true;
 const sections = document.querySelectorAll("section");
 const progress = document.querySelector(".progress h2");
 const circles = document.querySelectorAll(".circle");
+const menu = document.querySelector(".menu");
 
 const progressCounter = () => {
     progress.textContent = `${counter2}/${sections.length}`;
@@ -77,4 +78,8 @@ addEventListener("click", () => {
     counter2++;
     pageController() && (document.querySelector(`.section-${counter1}`).
     style.left = '-100vw');
+});
+
+menu.addEventListener('click', () => {
+    document.querySelector(".navbar").classList.toggle("change");
 });
